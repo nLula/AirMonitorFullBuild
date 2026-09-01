@@ -1,0 +1,19 @@
+[Unit]
+Description=AirMonitor web frontend (native, non-Docker)
+After=network-online.target airmonitor-collector.service
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=__RUN_USER__
+Group=__RUN_GROUP__
+WorkingDirectory=__AIRMONITOR_DIR__/frontend
+Environment=AIRMONITOR_CONFIG_DIR=__AIRMONITOR_DIR__/frontend/Library/config
+ExecStart=__AIRMONITOR_DIR__/venv/bin/python __AIRMONITOR_DIR__/frontend/run_server_native.py
+Restart=on-failure
+RestartSec=5
+# FRONTEND_PORT, TZ etc. are read directly from __AIRMONITOR_DIR__/../.env
+# by the script itself - nothing else needed here.
+
+[Install]
+WantedBy=multi-user.target

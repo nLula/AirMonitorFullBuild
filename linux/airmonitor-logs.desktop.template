@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=AirMonitor Logs
+Comment=Opens a terminal tailing the AirMonitor collector/frontend logs. Safe to close - it only watches the logs, it does not stop the server.
+Exec=__AIRMONITOR_DIR__/view-logs-gui.sh
+Terminal=false
+X-GNOME-Autostart-enabled=true

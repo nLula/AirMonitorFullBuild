@@ -1,0 +1,60 @@
+{
+  "last_poll": "2026-08-24T21:35:00.203645",
+  "sensors": {
+    "Floor_10/sensor-0": {
+      "name": "sensor-0",
+      "sensor_id": 0,
+      "first_seen": "2026-07-04T10:08:11.626078",
+      "url": null,
+      "online": false,
+      "last_check": "2026-08-24T21:35:00.203645",
+      "last_connect": "2026-08-21T14:10:00.216911",
+      "response_ms": null,
+      "error": "not found on network (discovery scan)"
+    },
+    "Floor_10/sensor-1": {
+      "name": "sensor-1",
+      "sensor_id": 1,
+      "first_seen": "2026-07-08T21:07:28.285205",
+      "url": null,
+      "online": false,
+      "last_check": "2026-08-24T21:35:00.203645",
+      "last_connect": "2026-08-21T14:10:00.216911",
+      "response_ms": null,
+      "error": "not found on network (discovery scan)"
+    },
+    "Floor_10/sensor-2": {
+      "name": "sensor-2",
+      "sensor_id": 2,
+      "first_seen": "2026-07-08T21:07:28.285205",
+      "url": null,
+      "online": false,
+      "last_check": "2026-08-24T21:35:00.203645",
+      "last_connect": "2026-08-21T14:10:00.216911",
+      "response_ms": null,
+      "error": "not found on network (discovery scan)"
+    },
+    "Floor_10/sensor-3": {
+      "name": "sensor-3",
+      "sensor_id": 3,
+      "first_seen": "2026-07-08T21:07:28.285205",
+      "url": null,
+      "online": false,
+      "last_check": "2026-08-24T21:35:00.203645",
+      "last_connect": "2026-08-21T14:10:00.216911",
+      "response_ms": null,
+      "error": "not found on network (discovery scan)"
+    },
+    "Floor_10/sensor-4": {
+      "name": "sensor-4",
+      "sensor_id": 4,
+      "first_seen": "2026-07-08T21:07:28.285205",
+      "url": null,
+      "online": false,
+      "last_check": "2026-08-24T21:35:00.203645",
+      "last_connect": "2026-08-21T14:10:00.216911",
+      "response_ms": null,
+      "error": "not found on network (discovery scan)"
+    }
+  }
+}
