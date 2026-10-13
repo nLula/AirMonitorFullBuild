@@ -1,0 +1,42 @@
+{
+  "settings": {
+    "aliases": {
+      "Floor_10|sensor-0": "Zero",
+      "Floor_10|sensor-1": "Uno",
+      "Floor_10|sensor-2": "Dos",
+      "Floor_10|sensor-3": "Tres",
+      "Floor_10|sensor-4": "IV"
+    }
+  },
+  "sensor_placements": {
+    "Floor 10": [
+      {
+        "sensorId": "sensor-1",
+        "x": 0.6408450704225352,
+        "y": 0.7125242205390171
+      },
+      {
+        "sensorId": "sensor-2",
+        "x": 0.6316359696641387,
+        "y": 0.7012506605601551
+      },
+      {
+        "sensorId": "sensor-3",
+        "x": 0.6408450704225352,
+        "y": 0.6744759556103576
+      },
+      {
+        "sensorId": "sensor-4",
+        "x": 0.6267605633802817,
+        "y": 0.7280253655099524
+      },
+      {
+        "sensorId": "sensor-0",
+        "x": 0.7269772481040087,
+        "y": 0.782983970406905
+      }
+    ],
+    "Floor 7": [],
+    "Floor 8": []
+  }
+}

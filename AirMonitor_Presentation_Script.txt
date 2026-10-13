@@ -1,0 +1,106 @@
+AIRMONITOR - PRESENTATION SCRIPT
+A walkthrough of the sensor dashboard for non-technical viewers
+
+
+WHAT IT IS
+------------
+- AirMonitor shows live air quality readings (CO2, temperature, humidity)
+  from small sensors placed around the building.
+- Each sensor reports back automatically every few minutes - nobody has
+  to do anything for the numbers to update.
+- The screen is organized into three tabs along the top: Visual, Graph,
+  and Log. There's also a Settings icon (the gear, top right) for names
+  and sensor placement.
+
+
+TAB 1: VISUAL
+---------------
+- Shows a floor plan with an icon for every sensor, sitting exactly
+  where that sensor is physically installed.
+- Use the floor switcher to move between floors (Floor 7 through 10).
+- Hover over any sensor icon to see its live reading: CO2 (ppm),
+  temperature, and humidity.
+- If a sensor has gone offline, hovering shows "Disconnected, last seen
+  online [time]" instead - and the icon itself changes appearance, so a
+  problem is visible at a glance without hovering over every sensor.
+- Small refresh icon near the top: forces an immediate check right now,
+  instead of waiting for the next automatic one.
+- This tab is the answer to "is everything working right now?"
+
+
+TAB 2: GRAPH
+---------------
+- Same floor switcher as the Visual tab.
+- Line charts showing CO2, temperature and humidity over time for that
+  floor, so you can see trends rather than just a snapshot.
+- Click a legend entry (CO2 / Temp / Hum) to show or hide that line -
+  handy for focusing on one measurement at a time, e.g. just CO2 during
+  a meeting.
+- This tab is the answer to "how has the air quality changed today/this
+  week?"
+
+
+TAB 3: LOG
+------------
+- A running record of every check the system has ever made: time,
+  sensor, whether it was online, and the reading if it was.
+- Offline events are called out separately, so it's easy to see when a
+  sensor went down and for how long.
+- This tab is the answer to "was sensor X actually working yesterday
+  afternoon?" - useful for troubleshooting, not needed for day-to-day
+  viewing.
+
+
+SETTINGS (gear icon, top right)
+-----------------------------------
+Opens a panel with two sections: Sensors and Security.
+
+  SENSORS - naming a sensor and assigning it to a floor
+  - Pick a sensor from the dropdown list. Newly-installed sensors show
+    up here automatically once the system finds them on the network,
+    marked "new".
+  - Choose which floor it belongs to.
+  - Type a friendly name (an "alias"), for example "Reception CO2"
+    instead of a technical sensor ID. This name is what shows up
+    everywhere else in the app, in both the Visual and Graph tabs.
+  - Click Save. A table underneath lists every sensor's current name for
+    reference.
+  - There's also a "Sensor Sensitivity Radius" setting - a purely visual
+    circle drawn around each sensor icon on the floor plan to show its
+    rough coverage area. Setting it to 0 turns the circle off.
+
+  SECURITY - PIN and recovery email
+  - Lets you change the PIN used to unlock sensor placement editing (see
+    below), and set a recovery email address.
+  - This part is normally only touched by whoever manages the sensors,
+    not something everyday viewers need to worry about.
+
+
+PLACING A SENSOR AT ITS REAL PHYSICAL LOCATION
+--------------------------------------------------
+This is done from the Visual tab, and is separate from naming a sensor:
+
+  1. On the Visual tab, find the "Developer Mode" toggle switch.
+  2. Turning it on asks for a short PIN - this exists so the floor plan
+     can't be rearranged by accident.
+  3. Once unlocked, click anywhere on the floor plan where a sensor is
+     actually installed. A list pops up of sensors not yet placed on
+     that floor - pick the right one, and its icon appears exactly
+     there.
+  4. To move a sensor that's in the wrong spot, click its icon to remove
+     it, then place it again at the correct spot.
+  5. Turn Developer Mode back off when finished, so the layout can't be
+     changed by mistake afterward.
+
+
+QUICK REFERENCE
+------------------
+- "Is everything working?"        -> Visual tab, hover the icons
+- "How do I rename a sensor?"     -> Settings > Sensors > pick sensor,
+                                      type a name, Save
+- "How do I fix a sensor's spot
+   on the floor plan?"            -> Visual tab > Developer Mode (PIN)
+                                      > click the floor plan
+- "How has it trended over time?" -> Graph tab
+- "Was it actually down earlier?" -> Log tab
+- Questions - there's a Contact link in the top bar of the app.

@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/airWave.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Air Monitor</title>
+    <script type="module" crossorigin src="/assets/index-BpoC4THZ.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-BtBZd106.css">
+    <style>
+      /* Mobile responsiveness patch (added on top of the built app, since no
+         React/CSS source is available to edit directly - see README).
+         Loaded after the compiled stylesheet, so these rules win on ties. */
+
+      @media (max-width: 768px) {
+        .app-header {
+          flex-wrap: wrap;
+          gap: .5rem 1rem;
+          padding: .6rem 1rem;
+        }
+        .app-content {
+          padding: .6rem .6rem;
+        }
+        .tabbar {
+          padding: 0 .5rem;
+          overflow-x: auto;
+          -webkit-overflow-scrolling: touch;
+        }
+        .tabbar-btn {
+          padding: .7rem 1rem;
+          font-size: .75rem;
+          white-space: nowrap;
+        }
+
+        /* Visual tab controls */
+        .visual-devbar {
+          flex-wrap: wrap;
+          row-gap: .5rem;
+          padding: .5rem;
+        }
+        .dev-action-group {
+          margin-left: 0;
+        }
+        .carousel-topbar {
+          flex-wrap: wrap;
+          row-gap: .5rem;
+        }
+
+        /* Graph tab controls */
+        .graph-controls {
+          padding: 8px 10px;
+        }
+        .graph-range, .graph-day {
+          flex-wrap: wrap;
+          row-gap: 8px;
+        }
+        .graph-range-slider {
+          width: 100%;
+          max-width: 220px;
+          flex: 1;
+        }
+        .chart-legend {
+          flex-wrap: wrap;
+          row-gap: .4rem;
+        }
+        .chart-header {
+          flex-wrap: wrap;
+          row-gap: .4rem;
+        }
+
+        /* Log tab */
+        .log-tab {
+          padding: 10px 10px 24px;
+        }
+        .log-toolbar {
+          flex-wrap: wrap;
+          row-gap: 8px;
+        }
+        .log-ranges {
+          flex-wrap: wrap;
+          row-gap: 6px;
+        }
+        .log-cards {
+          grid-template-columns: 1fr;
+        }
+        .log-timeline-row {
+          grid-template-columns: 96px 1fr 40px;
+          gap: 6px;
+        }
+        table.log-table {
+          display: block;
+          overflow-x: auto;
+          -webkit-overflow-scrolling: touch;
+          white-space: nowrap;
+        }
+
+        /* Settings dialog: stack the section list above the panel instead
+           of side-by-side, and let the section list scroll horizontally
+           instead of needing a tall sidebar. */
+        .sd-dialog {
+          width: 96vw;
+          height: 92vh;
+        }
+        .sd-body {
+          flex-direction: column;
+        }
+        .sd-nav {
+          flex-direction: row;
+          width: 100%;
+          overflow-x: auto;
+          -webkit-overflow-scrolling: touch;
+          border-right: none;
+          border-bottom: 1px solid var(--border);
+          padding: .35rem .5rem;
+        }
+        .sd-nav-item {
+          border-left: none;
+          border-bottom: 2px solid transparent;
+          white-space: nowrap;
+          padding: .5rem .75rem;
+        }
+        .sd-nav-item--active {
+          border-left-color: transparent;
+          border-bottom-color: var(--accent);
+        }
+        .sd-panel {
+          padding: 1rem;
+        }
+        .sd-section {
+          max-width: 100%;
+        }
+        .sd-row {
+          flex-wrap: wrap;
+          row-gap: .5rem;
+        }
+        .sd-input, .sd-select, .graph-day-input {
+          font-size: 16px; /* prevents iOS Safari auto-zoom on focus */
+        }
+
+        /* PIN and picker overlays */
+        .pin-modal {
+          max-width: 92vw;
+          padding: 1.5rem 1.5rem;
+        }
+        .picker-modal {
+          max-width: 92vw;
+        }
+        .sensor-tooltip {
+          max-width: 70vw;
+        }
+        .dev-btn-tooltip--portal {
+          max-width: 70vw;
+          white-space: normal;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .app-subtitle {
+          display: none;
+        }
+        .app-title {
+          font-size: .9rem;
+        }
+        .app-live {
+          font-size: .62rem;
+        }
+        .app-contact {
+          margin-left: 0;
+        }
+        .app-live + .app-contact {
+          margin-left: .75rem;
+        }
+      }
+    </style>
+
+  </head>
+  <body>
+    <div id="root"></div>
+    <script>
+      // Safety net for stale data: on a phone, backgrounding the tab or
+      // locking the screen can pause the app's own auto-refresh timer, so
+      // the Log/status views can be left showing old data indefinitely.
+      // Force a real page reload when the tab becomes visible again after
+      // being hidden a while, plus a periodic reload as a fallback for
+      // long-running sessions left open on a desktop.
+      (function () {
+        var hiddenAt = null;
+        document.addEventListener("visibilitychange", function () {
+          if (document.hidden) {
+            hiddenAt = Date.now();
+          } else if (hiddenAt && Date.now() - hiddenAt > 20000) {
+            location.reload();
+          }
+        });
+        setInterval(function () {
+          if (!document.hidden) location.reload();
+        }, 10 * 60 * 1000);
+      })();
+    </script>
+  </body>
+</html>

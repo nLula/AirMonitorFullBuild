@@ -1,0 +1,60 @@
+{
+  "last_poll": "2026-08-21T14:10:00.216911",
+  "sensors": {
+    "Floor_10/sensor-0": {
+      "name": "sensor-0",
+      "sensor_id": 0,
+      "first_seen": "2026-07-04T10:08:11.626078",
+      "url": "http://192.168.41.120/data",
+      "online": true,
+      "last_check": "2026-08-21T14:10:00.216911",
+      "last_connect": "2026-08-21T14:10:00.216911",
+      "response_ms": 356,
+      "error": null
+    },
+    "Floor_10/sensor-1": {
+      "name": "sensor-1",
+      "sensor_id": 1,
+      "first_seen": "2026-07-08T21:07:28.285205",
+      "url": "http://192.168.42.31/data",
+      "online": true,
+      "last_check": "2026-08-21T14:10:00.216911",
+      "last_connect": "2026-08-21T14:10:00.216911",
+      "response_ms": 419,
+      "error": null
+    },
+    "Floor_10/sensor-2": {
+      "name": "sensor-2",
+      "sensor_id": 2,
+      "first_seen": "2026-07-08T21:07:28.285205",
+      "url": "http://192.168.47.229/data",
+      "online": true,
+      "last_check": "2026-08-21T14:10:00.216911",
+      "last_connect": "2026-08-21T14:10:00.216911",
+      "response_ms": 207,
+      "error": null
+    },
+    "Floor_10/sensor-3": {
+      "name": "sensor-3",
+      "sensor_id": 3,
+      "first_seen": "2026-07-08T21:07:28.285205",
+      "url": "http://192.168.44.208/data",
+      "online": true,
+      "last_check": "2026-08-21T14:10:00.216911",
+      "last_connect": "2026-08-21T14:10:00.216911",
+      "response_ms": 99,
+      "error": null
+    },
+    "Floor_10/sensor-4": {
+      "name": "sensor-4",
+      "sensor_id": 4,
+      "first_seen": "2026-07-08T21:07:28.285205",
+      "url": "http://192.168.42.39/data",
+      "online": true,
+      "last_check": "2026-08-21T14:10:00.216911",
+      "last_connect": "2026-08-21T14:10:00.216911",
+      "response_ms": 101,
+      "error": null
+    }
+  }
+}
